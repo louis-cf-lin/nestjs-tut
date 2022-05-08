@@ -1,0 +1,41 @@
+### Create a new user
+POST http://localhost:3333/auth/signup
+content-type: application/json
+
+{
+  "email": "abc@abc.com",
+  "password": "12345"
+}
+
+### Sign in as an existing user
+POST http://localhost:3333/auth/signin
+content-type: application/json
+
+{
+  "email": "abc@abc.com",
+  "password": "12345"
+}
+
+### Get the currently signed in user
+GET http://localhost:3333/auth/whoami
+
+### Sign out
+POST http://localhost:3333/auth/signout
+
+### Find a particular user with a given ID
+GET http://localhost:3333/auth/2
+
+### Find all users with a given email
+GET http://localhost:3333/auth?email=aaa@aaa.com
+
+### Delete a user with a given id
+DELETE http://localhost:3333/auth/2
+
+### Update a user
+PATCH http://localhost:3333/auth/sdafsf
+content-type: application/json
+
+{
+  "password": "aaa"
+}
+
